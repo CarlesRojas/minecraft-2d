@@ -244,7 +244,7 @@
 					"amplitude": 0.3,
 					"parts": ["leftArm", "rightArm", "leftArm2", "rightArm2"],
 					"type": "y",
-					"inverted": [false, false]
+					"inverted": [false, false, false, false]
 				}
 			]
 		},

@@ -6,6 +6,7 @@
 [node name="SpriteManager" type="Node"]
 script = ExtResource("1_howlg")
 metadata/AnimationJsonPath = "res://asset/entity/animation/player.json"
+metadata/SpritePath = ""
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
