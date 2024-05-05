@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3dtoncdh60le"]
+[gd_scene load_steps=3 format=3 uid="uid://c3dtoncdh60le"]
 
-[ext_resource type="PackedScene" uid="uid://e1dfrs0q0tcf" path="res://scene/animated_sprite.tscn" id="1_dv8p3"]
+[ext_resource type="PackedScene" uid="uid://bqayo0myxlauh" path="res://scene/player.tscn" id="1_vismd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7s70y"]
 
 [node name="Game" type="Node2D"]
 
-[node name="SpriteManager" parent="." instance=ExtResource("1_dv8p3")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+
+[node name="Player" parent="." instance=ExtResource("1_vismd")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_7s70y")

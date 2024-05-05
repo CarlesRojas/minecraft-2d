@@ -1,8 +1,9 @@
 extends Node
 
 @onready var sprite_manager = $"."
-@onready var sprite_2d = $Sprite2D
 @onready var sprite_info = JSON.parse_string(FileAccess.get_file_as_string(sprite_manager.get_meta("AnimationJsonPath")))
+@onready var sprite_texture = load(sprite_manager.get_meta("SpritePath"))
+
 @onready var sprites = {}
 @onready var currentAnimation = "idle"
 @onready var basePosition = {}
@@ -25,7 +26,7 @@ func createPartSprite(part, x, y, width, height):
 	var sprite = Sprite2D.new()
 	var atlas_texture = AtlasTexture.new()
 
-	atlas_texture.atlas = sprite_2d.texture
+	atlas_texture.atlas = sprite_texture
 	atlas_texture.region = Rect2(x, y, width, height)
 
 	sprite.texture = atlas_texture
