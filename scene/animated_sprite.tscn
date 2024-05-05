@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://e1dfrs0q0tcf"]
+
+[ext_resource type="Script" path="res://script/AnimatedSprite.gd" id="1_howlg"]
+[ext_resource type="Texture2D" uid="uid://buqameu1fshhs" path="res://asset/entity/steve.png" id="2_3m16j"]
+
+[node name="SpriteManager" type="Node"]
+script = ExtResource("1_howlg")
+metadata/AnimationJsonPath = "res://asset/entity/animation/player.json"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_3m16j")

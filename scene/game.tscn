@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3dtoncdh60le"]
+
+[ext_resource type="PackedScene" uid="uid://e1dfrs0q0tcf" path="res://scene/animated_sprite.tscn" id="1_dv8p3"]
+
+[node name="Game" type="Node2D"]
+
+[node name="SpriteManager" parent="." instance=ExtResource("1_dv8p3")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
